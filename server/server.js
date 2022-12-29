@@ -53,7 +53,6 @@ app.post('/', async (req, res) => {
   }
 });
 
-const port = 8080;
-app.listen(port, () =>
-  console.log(`AI server started on http://localhost:${port}`)
+app.listen(8080, () =>
+  console.log(`AI server started on http://localhost:8080`)
 );
