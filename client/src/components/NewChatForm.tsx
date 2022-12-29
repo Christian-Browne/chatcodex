@@ -57,7 +57,7 @@ const NewChatForm = () => {
   };
 
   return (
-    <form action="#">
+    <form>
       <input
         name="prompt"
         placeholder="Ask Codex..."
