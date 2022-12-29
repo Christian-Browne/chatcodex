@@ -45,10 +45,14 @@ const NewChatForm = () => {
 
       if (response.ok) {
         const data = await response.json();
-        setResponseMessages((prevResponses: any) => [
-          ...prevResponses,
-          { message: data.bot.trim(), ai: true, type: true },
-        ]);
+        setResponseMessages(
+          (
+            prevResponses: { message: string; ai: boolean; type: boolean }[]
+          ) => [
+            ...prevResponses,
+            { message: data.bot.trim(), ai: true, type: true },
+          ]
+        );
       } else {
         const err = await response.text();
         console.log(err);
