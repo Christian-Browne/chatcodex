@@ -32,7 +32,7 @@ const NewChatForm = () => {
       setLoading((prev: any) => !prev);
       setCurrentUserPrompt('');
 
-      const response = await fetch('https://chatcodex.onrender.com', {
+      const response = await fetch('http://localhost:8080', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -45,14 +45,10 @@ const NewChatForm = () => {
 
       if (response.ok) {
         const data = await response.json();
-        setResponseMessages(
-          (
-            prevResponses: { message: string; ai: boolean; type: boolean }[]
-          ) => [
-            ...prevResponses,
-            { message: data.bot.trim(), ai: true, type: true },
-          ]
-        );
+        setResponseMessages((prevResponses: any) => [
+          ...prevResponses,
+          { message: data.bot.trim(), ai: true, type: true },
+        ]);
       } else {
         const err = await response.text();
         console.log(err);
