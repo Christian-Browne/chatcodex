@@ -32,7 +32,7 @@ const NewChatForm = () => {
       setLoading((prev: any) => !prev);
       setCurrentUserPrompt('');
 
-      const response = await fetch('http://localhost:8080', {
+      const response = await fetch('https://codex-3kth.onrender.com', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
