@@ -2,7 +2,7 @@
 ChatCodex is a advanced AI chat system that utilizes the OpenAI API and artificial intelligence to provide highly personalized and intuitive communication with users. The system was designed to be able to understand and respond to a wide range of user inputs and inquiries, and to be able to adapt and learn over time in order to improve its performance.
 
 ## API Key
-To use the API for this project, please head over to the following link: link-to-api-key
+To use the API for this project, please head over to the following link: https://openai.com/api/
 
 Once you have obtained your API key, please paste it in your project's .env file under the name OPENAI_API_KEY.
 
